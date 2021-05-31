@@ -1,0 +1,174 @@
+
+.leagues__block{
+  color: #fff;
+  z-index: 2;
+  top: 40px;
+  overflow:auto;
+  min-height:100vh;
+  position: fixed;
+  left: -100%;
+  background-color: #555;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+  padding: 15px;
+  transition: .5s all ease-in;
+  &.active{
+    left: 0;
+    transition: .5s all ease-out;
+  }
+}
+.leagues__title{
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-style: italic;
+  border-bottom: 2px solid #fff;
+}
+.leagues-item{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+.leagues__link{
+  width: 100%;
+  min-height: 40px;
+  color: #fff;
+  font-weight: 700;
+}
+
+//* Блок с командами
+
+.teams__block{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 50px;
+  background-color: #333;
+  @media (min-width: 768px){
+    padding-right: 25px;
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+  }
+}
+.teams__list{
+}
+.teams__link{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(102, 102, 102);
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 20px 40px 1fr;
+  grid-template-rows: 20px;
+  align-items: center;
+  
+  .teams__index{
+    color: #fff;
+  }
+  img{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .teams__name{
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+  }
+  
+  @media(min-width: 1100px){
+    grid-template-columns: 30px 70px 1fr;
+    grid-template-rows: 40px;
+    img{
+      width: 40px;
+      height: 40px;
+    }
+    .teams__name{
+      font-size: 16px;
+    }
+    // .teams__index{
+    //   color: #fff;
+    //   font-size: 20px;
+    // }
+  }
+}
+h2.teams__title{
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+.matches__item{
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  grid-template-rows: 50px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  
+}
+.matches__team-score{
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  @media(min-width: 768px){
+    font-size: 20px;
+  }
+}
+.matches__team-name{
+  font-size: 10px;
+  font-style: italic;
+  color: #fff;
+  @media(min-width: 458px){
+    font-size: 12px;
+  }
+  @media(min-width: 768px){
+    font-size: 14px;
+  }
+}
+.matches__title{
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+.matches__team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &.--draw{
+    border-bottom: 2px solid orange;
+  }
+  &.--winner{
+    border-bottom: 2px solid green;
+  }
+  &.--looser{
+    border-bottom: 2px solid orangered;
+  }
+}
+.versus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+}
