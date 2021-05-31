@@ -19,7 +19,7 @@ export const Header = () => {
             <span></span>
           </div>
           <a href="" className="header__link">
-            <h3 className="header__title">FOOTBALL-STATX</h3>
+            <h3 className="header__title">SoccerStat</h3>
           </a>
         </section>
       </div>
